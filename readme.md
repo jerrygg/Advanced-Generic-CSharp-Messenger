@@ -1,5 +1,5 @@
-# Advanced Generic C# messenger
-Advanced Generic C# messenger is a messaging system originally developed for Unity components to communicate with each other in a loosely coupled way.
+# Advanced Generic C# Messenger
+Advanced Generic C# Messenger is a messaging system originally developed for Unity components to communicate with each other in a loosely coupled way.
 ## Features:
 * Create an event manager for any Enum based on the `System.Int32 (int)` type
 * Option to log all messages
@@ -8,7 +8,7 @@ Advanced Generic C# messenger is a messaging system originally developed for Uni
 
 ## Usage:
 
-Copy the `EventSystem` folder into your Unity project assets folder to include the scripts.
+Copy the `AdvancedGenericCSharpMessenger` folder into your Unity project assets folder to include the scripts.
 
 1. To create a new event (this assumes you have an enum named GlobalEvent):
  	```csharp
