@@ -1,5 +1,5 @@
-# Advanced Generic C# Messenger
-Advanced Generic C# Messenger is a messaging system originally developed for Unity components to communicate with each other in a loosely coupled way.
+# Advanced Generic C# messenger
+Advanced Generic C# messenger is a messaging system originally developed for Unity components to communicate with each other in a loosely coupled way.
 ## Features:
 * Create an event manager for any Enum based on the `System.Int32 (int)` type
 * Option to log all messages
@@ -15,7 +15,7 @@ Copy the `AdvancedGenericCSharpMessenger` folder into your Unity project assets 
     EventManager<GlobalEvent> globalEventManager = new EventManager<GlobalEvent>();
     ```
  		
- 2. To add a listener to an eventManager:
+2. To add a listener to an eventManager:
     ```csharp
     //adds a listener with no parameters passed to registered callback.
     globalEventManager.AddListener(GlobalEvent.DoSomething, FunctionToHandleDoSomethingEvent);
@@ -23,7 +23,7 @@ Copy the `AdvancedGenericCSharpMessenger` folder into your Unity project assets 
     globalEventManager.AddListener<float>(GlobalEvent.DoSomething, FunctionToHandleDoSomethingEventWithFloatParamater);
     ```
  	
- 3. To broadcast an event
+3. To broadcast an event
     ```csharp
     //Broadcasts a message with no parameters
  	globalEventManager.Broadcast(GlobalEvent.DoSomething);
@@ -31,9 +31,9 @@ Copy the `AdvancedGenericCSharpMessenger` folder into your Unity project assets 
  	globalEventManager.Broadcast<float>(GlobalEvent.DoSomething, 4f);
  	```
  
- 4. Accessing a single instance event via the `EventManagerRepository`. Single instance events are useful if you need to be able to access the same event manager from many different scripts.
+4. Accessing a single instance event via the `EventManagerRepository`. Single instance events are useful if you need to be able to access the same event manager from many different scripts.
     ```csharp
-    A) EventManagerRepository.Instance.GetSingleInstanceEventManager<GlobalEvent>().Broadcast<float>(GlobalEvent.DoSomething, 4f);
+    EventManagerRepository.Instance.GetSingleInstanceEventManager<GlobalEvent>().Broadcast<float>(GlobalEvent.DoSomething, 4f);
     ```
     If you are accessing an event manager in the repository frequently, store a reference in the script where you need it instead of using the `GetSingleInstanceEventManager` method.
 
